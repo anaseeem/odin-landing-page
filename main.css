@@ -17,6 +17,8 @@
 
   --logo-font-size: 24px;
   --hero-font-size: 48px;
+
+  --radius: 0.6rem;
 }
 
 html,
@@ -36,11 +38,219 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  padding: 2rem;
   flex: 1;
 }
 
 .container {
-  max-width: 70rem;
+  max-width: 120rem;
   margin: 0 auto;
+}
+
+.cta_btn {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  color: var(--color-dark-foreground);
+  font-weight: 700;
+  border: 0;
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_section {
+  background-color: var(--color-dark-background);
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.header_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+.logo {
+  font-size: var(--logo-font-size);
+  color: var(--color-dark-foreground);
+  font-weight: 900;
+}
+.nav_main ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav_main li {
+  list-style: none;
+}
+.nav_main a {
+  text-decoration: none;
+  color: var(--color-dark-foreground-secondary);
+}
+
+section {
+  padding-block: 10rem;
+}
+
+.hero_section {
+  background-color: var(--color-dark-background);
+}
+
+.hero_section-container {
+  display: flex;
+  gap: 10rem;
+  padding-inline: 2rem;
+}
+
+.hero_section--left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+.hero_section--left h1 {
+  font-size: 48px;
+  color: var(--color-dark-foreground);
+  font-weight: 900;
+}
+.hero_section--left .hero-subtitle {
+  font-size: 18px;
+  color: var(--color-dark-foreground-secondary);
+}
+.hero_section--left .cta_btn {
+  background-color: var(--cta-background);
+}
+
+.hero_section--right {
+  flex: 1.5;
+}
+.hero_img-wrapper {
+  height: 100%;
+}
+
+.hero_img {
+  color: var(--color-dark-foreground-secondary);
+  background-color: #6d747d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+}
+
+.info_section {
+  padding-top: 5rem;
+}
+
+.info_section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-dark-background);
+  font-weight: 900;
+  margin-bottom: 4rem;
+}
+.info_card-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.info_card {
+  --card-width: 160px;
+  width: var(--card-width);
+}
+.info_card-img-container {
+  border: 2px solid var(--cta-background);
+  border-radius: var(--radius);
+  width: var(--card-width);
+  height: var(--card-width);
+  margin-bottom: 1rem;
+}
+.info_card-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.info_card p {
+  text-align: center;
+}
+
+.quote_section {
+  background-color: var(--color-dark-foreground-secondary);
+  text-align: center;
+  padding-inline: 2rem;
+}
+.quote-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+blockquote {
+  font-size: 36px;
+  color: var(--color-dark-background);
+  font-weight: 300;
+  font-style: italic;
+}
+.quote-container figcaption {
+  text-align: right;
+  font-weight: 900;
+}
+
+.cta_section-container {
+  padding-inline: 2rem;
+}
+.cta_section-inner-wrapper {
+  background-color: var(--cta-background);
+  padding: 3rem 10rem;
+  color: var(--color-dark-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--radius);
+}
+
+.cta_section--right .cta_btn {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.footer {
+  background-color: var(--color-dark-background);
+  color: var(--color-dark-foreground-secondary);
+  padding-block: 2rem;
+  text-align: center;
+}
+
+/* media queries */
+
+/* 900px and below */
+@media (max-width: 900px) {
+  .hero_img-wrapper {
+    height: 100%;
+  }
+}
+
+/* 650px and below */
+@media (max-width: 650px) {
+  .hero_section-container,
+  .cta_section-inner-wrapper {
+    flex-direction: column;
+  }
+
+  .cta_section-inner-wrapper {
+    gap: 2rem;
+  }
+}
+
+/* 450px and below */
+@media (max-width: 450px) {
+  .header_main {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta_section-inner-wrapper {
+    padding-inline: 2rem;
+  }
 }
