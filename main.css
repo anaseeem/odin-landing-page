@@ -107,26 +107,28 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  flex: 1;
+  /* flex: 1; */
 }
 .hero_section--left h1 {
-  font-size: 48px;
+  font-size: 4.8rem;
   color: var(--color-dark-foreground);
   font-weight: 900;
+  line-height: 1.4;
 }
 .hero_section--left .hero-subtitle {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: var(--color-dark-foreground-secondary);
+  margin-bottom: auto;
 }
 .hero_section--left .cta_btn {
   background-color: var(--cta-background);
 }
 
-.hero_section--right {
-  flex: 1.5;
-}
 .hero_img-wrapper {
-  height: 30rem;
+  max-width: 45rem;
+  height: 25rem;
+  width: 45rem;
+  flex: 1;
 }
 
 .hero_img {
@@ -180,12 +182,12 @@ section {
 
 .quote_section {
   background-color: var(--color-dark-foreground-secondary);
-  text-align: center;
   padding-inline: 2rem;
 }
 .quote-container {
-  max-width: 80rem;
+  max-width: 60rem;
   margin: 0 auto;
+  text-align: center;
 }
 blockquote {
   font-size: 36px;
@@ -196,21 +198,29 @@ blockquote {
 .quote-container figcaption {
   text-align: right;
   font-weight: 900;
+  font-size: 1.4rem;
 }
 
 .cta_section-container {
   padding-inline: 2rem;
 }
 .cta_section-inner-wrapper {
+  margin: 0 auto;
+  max-width: 90rem;
   background-color: var(--cta-background);
-  padding: 3rem 10rem;
+  padding: 4rem 8rem;
   color: var(--color-dark-foreground);
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: var(--radius);
 }
-
+.cta_section--left h3 {
+  font-size: 2.4rem;
+}
+.cta_section--left p {
+  font-size: 1.6rem;
+}
 .cta_section--right .cta_btn {
   background-color: transparent;
   border: 1px solid;
@@ -224,6 +234,14 @@ blockquote {
 }
 
 /* media queries */
+
+/* 900px and below */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
 
 /* 900px and below */
 @media (max-width: 900px) {
